@@ -14,13 +14,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-ppc64le
     steps:
     - uses: actions/checkout@v4
     - name: Set up python 3.8
       uses: actions/setup-python@v5
       with:
         python-version: '3.8.18'
+        architecture: 'ppc64le'
     - name: Install dependencies
       run: |
         cd src
